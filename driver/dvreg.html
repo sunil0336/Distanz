@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        body{
+            background-color: black;
+            /* background-image: url(bg.jpg); */
+        }
+        .signup {
+            height: 80vh;
+            width: 30%;
+            position: absolute;
+            top: 3rem;
+            right: 32%;
+            z-index: 1;
+            padding: 2% 2%;
+            background: #fff;
+            /* display: none; */
+            /* border: 2px solid; */
+            /* box-shadow: -20px 0px 150px 150px #fe5b3d; */
+        }
+
+
+        .signup span {
+            font-size: 16px;
+            margin: 5px 0;
+            display: inline-block;
+            color: #a71830;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+        }
+
+        .signup form input {
+            width: 89%;
+            padding: 8px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #607d8b;
+            background: transparent;
+            border-radius: 30px;
+        }
+
+        .signup .s-btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .signup .s-btn input {
+            width: 7rem;
+            background: #c00606;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .signup .s-btn input:hover {
+            background: #4d0404;
+        }
+
+        .signup .lb {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup .lb i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup">
+        <div class="lb">
+            <h2>Sign-Up</h2>
+        </div>
+        <form name="rvForm" action="dvreg.php" method="post">
+            <span><b>Company-model</b></span>
+            <input type="text" name="company">
+            
+            <span><b>Year of purchase</b></span>
+            <input type="text" name="yop" required>
+            
+            <span><b>Seater</b></span>
+            <input type="number" name="seater">
+
+            <span><b>Vehicle No..</b></span>
+            <input type="text" name="vehicleno">
+
+            <span><b>Type of vehicle</b></span>
+            <input type="text" name="type" placeholder="AC , NON-AC">
+            
+            <span><b>Rc No</b></span>
+            <input type="text" name="rc">
+            
+
+            <div class="s-btn">
+                <input type="submit" value="Register" name="reg" onclick="return vv()">
+            </div>
+        </form>
+        
+    </div>
+    <script src="main.js"></script>
+    
+    <script>
+    	function vv(){
+		    let c = document.forms["rvForm"]["company"].value;
+		    let y = document.forms["rvForm"]["yop"].value;
+		    let s = document.forms["rvForm"]["seater"].value;
+		    let p = document.forms["rvForm"]["vehicleno"].value;
+		    let x = document.forms["rvForm"]["type"].value;
+		    let r = document.forms["rvForm"]["rc"].value;
+
+		    if(c == ""){
+			alert("Enter the Company-model! ");
+			return false;
+		    }
+		    if(y == ""){
+			alert("Enter the Year of purchase! ");
+			return false;
+		    }
+		    if(s == ""){
+			alert("Enter the seater! ");
+			return false;
+		    }
+		    if(p == ""){
+			alert("Enter the Vehicle No.! ");
+			return false;
+		    }
+		    if(x == ""){
+			alert("Enter the Type of vehicle! ");
+			return false;
+		    }
+		    
+		    if(r == ""){
+			alert("Enter the RC number ");
+			return false;
+		    }
+
+    	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+.login {
+    height: 100vh;
+    width: 28%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 10% 2%;
+    background: #fff;
+    display: none;
+    /* border: 2px solid; */
+    box-shadow: -20px 0px 150px 150px #fe5b3d;
+}
+
+
+.login span {
+    font-size: 16px;
+    margin: 10px 0;
+    display: inline-block;
+    color: #a71830;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+
+.login form input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.login .s-btn {
+    margin-top: 20px;
+}
+
+.login .s-btn input {
+    background: #c00606;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login .s-btn input:hover {
+    background: #4d0404;
+}
+
+.login .lb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login .lb i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* sign up */
+
+.signup {
+    height: 100vh;
+    width: 28%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 2%;
+    background: #fff;
+    display: none;
+    /* border: 2px solid; */
+    box-shadow: -20px 0px 150px 150px #fe5b3d;
+}
+
+
+.signup span {
+    font-size: 16px;
+    margin: 5px 0;
+    display: inline-block;
+    color: #a71830;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+
+.signup form input {
+    width: 100%;
+    padding: 8px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.signup .s-btn {
+    margin-top: 20px;
+}
+
+.signup .s-btn input {
+    background: #c00606;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.signup .s-btn input:hover {
+    background: #4d0404;
+}
+
+.signup .lb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup .lb i {
+    font-size: 25px;
+    cursor: pointer;
+}

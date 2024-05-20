@@ -1,0 +1,238 @@
+<?php
+	session_start();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabbooking</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<style>
+	.msg{
+		margin-top: 5rem;
+		z-index: 11;
+		position: absolute;
+	}
+</style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="./img/jeep.png" alt="logo"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="header-btn">
+            <!-- <a href="#" class="" onclick="return cancel()">Sign Up</a> -->
+            <a href="profile.php" class="sign-up">My Profile</a>
+            <a href="logout.php" class="sign-in">Sign Out</a>
+
+        </div>
+    </header> 
+
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>Book a vehicle</h1>
+            <p>Effortless vehicle booking, find your perfect ride in minutes.</p>
+            <div class="app-stores">
+                <img src="./img/ios.png" alt="">
+                <img src="./img/512x512.png" alt="">
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form name="myForm" action="car.php" method="POST">
+                <div class="input-box">
+                    <span>Source</span>
+                    <!-- <input type="text" name="source" id="" placeholder="Enter Source"> -->
+                    <select id="source" name="source">
+                        <option value="null">Select City</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Jalgaon">Jalgaon</option>
+                        <option value="Nashik">Nashik</option>  
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span>Destination</span>
+                    <!-- <input type="text" name="destination" id="" placeholder="Enter Destination"> -->
+                    <select id="destination" name="destination">
+                        <option value="null">Select City</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Jalgaon">Jalgaon</option>
+                        <option value="Nashik">Nashik</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="pdate">
+                </div>
+                <div class="input-box">
+                    <span>Drop Date</span>
+                    <input type="date" name="ddate">
+                </div>
+                <input type="submit" name="submit" value="Search" class="btn" onclick="return validateForm()" >
+            </form>
+
+        </div>
+    </section>
+
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How It Works</span>
+            <h1>Book With 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <!--<img src="img/bxs-map.png">-->
+                <img src="img/bxs-map.png" alt=">">
+                <h2>Choose a Location</h2>
+                <p>Multiple Destinations? No problem! Tell us where you need to be and we'll arrange a booking for you.</p>
+            </div>
+
+            <div class="box">
+                <img src="img/bxs-calendar-check.png" alt=">">
+                <h2>Pick-Up Date</h2>
+                <p>Say Goodbye to last-minute, with our service, you can now choose your ideal pickup date for your ride.</p>
+            </div>
+
+            <div class="box">
+                <img src="img/bxs-calendar-star.png" alt=">">
+                <h2>Book a Vehicle</h2>
+                <p>Our user friendly website let's you compare prices, choose your vehicle and book your ride in minutes.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Best Customer Experience</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="img/about.png" alt="">
+            </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <p>Welcome to the future of vehicle booking! We're here to make your traveling smooth, convenient and unforgettable. Whether you're a seasoned explorer or a first-time adventurer, we offer a diverse fleet of vehicles and unparalleled service to match your every need</p>
+                <p>Your safety is our priority. All our vehicles are meticulously maintained and driven by licensed, professional drivers.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>What's Our Customer's Say</h1>
+        </div>
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/sunil.jpg" alt=">">
+                </div>
+                <h2>Sunil Rathod</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Excellent experience! Booking a car through your website was incredibly easy and convinient.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev2.jpg" alt=">">
+                </div>
+                <h2>Shreyash Iyer</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>The overall experience was great!</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev3.jpg" alt=">">
+                </div>
+                <h2>Radhika Pawar</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Highly recommended! I was bit hesitant to book a ride online due to saftey concerns, but throughout the journey i felt very safe and comfortable.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="left">
+            <h2>Contact Us</h2>
+            <form name="contactus" action="contactus.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+        <div class="right">
+            <h2>Our Contact Information</h2>
+            <p>
+                <i class="fas fa-map-marker-alt"></i> #Distanz
+            </p>
+            <p>
+                <i class="fas fa-phone"></i> +91 9890957016
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> distanz@gmail.com
+            </p>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>&#169; Distanz All Rights Reserved</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+    
+    <?php
+    	//pg_close($conn);
+    ?>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

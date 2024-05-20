@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        body{
+            background-color: black;
+            /* background-image: url(bg.jpg); */
+        }
+        .signup {
+            height: 80vh;
+            width: 30%;
+            position: absolute;
+            top: 3rem;
+            right: 32%;
+            z-index: 1;
+            padding: 2% 2%;
+            background: #fff;
+            /* display: none; */
+            /* border: 2px solid; */
+            /* box-shadow: -20px 0px 150px 150px #fe5b3d; */
+        }
+
+
+        .signup span {
+            font-size: 16px;
+            margin: 5px 0;
+            display: inline-block;
+            color: #a71830;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+        }
+
+        .signup form input {
+            width: 89%;
+            padding: 8px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #607d8b;
+            background: transparent;
+            border-radius: 30px;
+        }
+
+        .signup .s-btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .signup .s-btn input {
+            width: 7rem;
+            background: #c00606;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .signup .s-btn input:hover {
+            background: #4d0404;
+        }
+
+        .signup .lb {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup .lb i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup">
+        <div class="lb">
+            <h2>Sign-Up</h2>
+        </div>
+        <form name="sForm" action="dsignup.php" method="post">
+            <span><b>Name</b></span>
+            <input type="text" name="name" required>
+
+            <span><b>Email</b></span>
+            <input type="email" name="email" required>
+
+            <span><b>Contact No.</b></span>
+            <input type="text" name="contact">
+
+            <span><b>Address</b></span>
+            <input type="text" name="address" required>
+
+            <span><b>License No</b></span>
+            <input type="text" name="l" id="l">
+
+            <span><b>Username</b></span>
+            <input type="text" name="username">
+
+            <span><b>Password</b></span>
+            <input type="password" name="pwd" id="pwd">
+
+            <div class="s-btn">
+                <input type="submit" value="Sign Up" name="submit" onclick="return svalidation();">
+                <p>Already have an account?<a href="dlogin.php">LogIn</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

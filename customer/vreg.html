@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>vreg</title>
+</head>
+<body>
+    <div class="vreg">
+        <div class="lb">
+            <h2>Register Vehicle</h2>
+            <!-- <i class='bx bx-arrow-back' onclick="return hidesignup()"></i> -->
+            <img src="img/arrow-back-regular-24.png" alt="Back" onclick="return hidevreg()">
+        </div>
+        <form name="sForm" action="dsignup.php" method="post">
+            <span><b>Company</b></span>
+            <input type="text" name="company" required>
+
+            <span><b>Model</b></span>
+            <input type="text" name="model" required>
+
+            <span><b>Vehicle No.</b></span>
+            <input type="text" name="vehicle-no">
+
+            <span><b>Year of purchase</b></span>
+            <input type="text" name="yop" required>
+
+            <span><b>Seater</b></span>
+            <input type="text" name="seater">
+
+            <span><b>Type of vehicle</b></span>
+            <input type="text" name="type">
+            
+            <span><b>Rc No.</b></span>
+            <input type="text" name="rc">
+            
+            <div class="yn">
+				<label for="puc" class="l1">PUC ?:</label>
+				<input type="radio" name="puc" checked>YES
+				<input type="radio" name="puc">NO
+				<label for="insurance" class="l2">INSURANCE ?:</label>
+				<input type="radio" name="insurance" checked>YES
+				<input type="radio" name="insurance">NO
+			</div>
+
+            <div class="s-btn">
+                <input type="submit" value="Register" name="reg" onclick="return vregv()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
