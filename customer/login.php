@@ -3,7 +3,7 @@
     $u = $_POST['username'];
     $p = $_POST['pwd'];
 
-    $conn = pg_connect("host=localhost dbname=New user=postgres password=Sunil24");
+    $conn = pg_connect("host= dbname= user= password=");
     if(!$conn){
         die ("Error.");
     }
